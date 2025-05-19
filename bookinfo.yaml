@@ -71,10 +71,10 @@ spec:
     spec:
       serviceAccountName: bookinfo-details
       imagePullSecrets:
-      - name: jfrog-secret
+      - name: harbor-secret
       containers:
       - name: details
-        image: nyanlintun.jfrog.io/nyanlintun-docker-local/details-v1:1.20.3
+        image: harbor.nyanlintun.xyz/bookinfo/autobahn-details-v1:1.20.3
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
@@ -124,10 +124,10 @@ spec:
     spec:
       serviceAccountName: bookinfo-ratings
       imagePullSecrets:
-      - name: jfrog-secret
+      - name: harbor-secret
       containers:
       - name: ratings
-        image: nyanlintun.jfrog.io/nyanlintun-docker-local/ratings-v1:1.20.3
+        image: harbor.nyanlintun.xyz/bookinfo/autobahn-ratings-v1:1.20.3
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
@@ -177,10 +177,10 @@ spec:
     spec:
       serviceAccountName: bookinfo-reviews
       imagePullSecrets:
-      - name: jfrog-secret
+      - name: harbor-secret
       containers:
       - name: reviews
-        image: nyanlintun.jfrog.io/nyanlintun-docker-local/reviews-v1:1.20.3
+        image: harbor.nyanlintun.xyz/bookinfo/autobahn-reviews-v1:1.20.3
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR
@@ -219,10 +219,10 @@ spec:
     spec:
       serviceAccountName: bookinfo-reviews
       imagePullSecrets:
-      - name: jforg-secret
+      - name: harbor-secret
       containers:
       - name: reviews
-        image: nyanlintun.jfrog.io/nyanlintun-docker-local/reviews-v2:1.20.3
+        image: harbor.nyanlintun.xyz/bookinfo/autobahn-reviews-v2:1.20.3
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR
@@ -261,10 +261,10 @@ spec:
     spec:
       serviceAccountName: bookinfo-reviews
       imagePullSecrets:
-      - name: jforg-secret
+      - name: harbor-secret
       containers:
       - name: reviews
-        image: nyanlintun.jfrog.io/nyanlintun-docker-local/reviews-v3:1.20.3
+        image: harbor.nyanlintun.xyz/bookinfo/autobahn-reviews-v3:1.20.3
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR
@@ -331,10 +331,10 @@ spec:
     spec:
       serviceAccountName: bookinfo-productpage
       imagePullSecrets:
-      - name: jforg-secret
+      - name: harbor-secret
       containers:
       - name: productpage
-        image: nyanlintun.jfrog.io/nyanlintun-docker-local/productpage-v1:1.20.3
+        image: harbor.nyanlintun.xyz/bookinfo/autobahn-productpage-v1:1.20.3
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
